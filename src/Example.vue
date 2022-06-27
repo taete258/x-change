@@ -46,8 +46,6 @@ export default defineComponent({
       count2.value += 1;
     };
     const onClearAccount = () => {
-      // account.username = "";
-      // account.password = "";
       state.account = defaultAccount;
     };
 

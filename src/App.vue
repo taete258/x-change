@@ -1,13 +1,20 @@
 <template>
-  <HelloWorld />
+  <div class="bg-gray-200 items-stretch h-screen overflow-hidden">
+    <Navbar />
+    <router-view class="mb-auto h-[89%]" />
+    <Footer />
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import Navbar from "./components/NavBar.vue";
+import Footer from "./components/Footer.vue";
 
 export default defineComponent({
   components: {
-    HelloWorld,
+    // HomeView,
+    Navbar,
+    Footer,
   },
   setup() {
     return {};
@@ -21,19 +28,6 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+  color: #e5e7eb;
 }
 </style>
